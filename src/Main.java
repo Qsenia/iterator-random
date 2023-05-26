@@ -1,14 +1,12 @@
-import java.util.Iterator;
-
 public class Main {
-
     public static void main(String[] args) {
-        Randoms randoms = new Randoms(50, 90);
-        Iterator<Integer> iterator = randoms.getIterator();
-        System.out.println("Ваше случайное число: ");
-        while (iterator.hasNext()) ;
-        System.out.println(iterator.next());
-
+        for (int r : new Randoms(90, 100)) {
+            System.out.println("Случайное число: " + r);
+            if (r == 100) {
+                System.out.println("Выпало число 100, давайте на этом закончим");
+                break;
+            }
+        }
     }
 }
 
